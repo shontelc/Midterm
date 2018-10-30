@@ -1,5 +1,7 @@
 package pkgShape;
 
+import java.util.Comparator;
+
 public class Cuboid extends Rectangle {
 	
 	private int iDepth;
@@ -25,5 +27,19 @@ public class Cuboid extends Rectangle {
 	public double perimeter() {
 		throw new UnsupportedOperationException("Cannot find perimeter of cuboid!");
 	}
+	
+	class SortByArea implements Comparator<Cuboid>{
+		public int compare(Cuboid a, Cuboid b) {
+			return Double.compare(a.area(), b.area());
+		
+		}
+	}
+	class SortByVolume implements Comparator<Cuboid>{
+		public int compare(Cuboid a, Cuboid b) {
+			return Double.compare(a.volume(), b.volume());		
+		
+	}
+		
 
+}
 }
