@@ -1,12 +1,17 @@
 package pkgShape;
 
-import java.util.Collections;
 
 public class Rectangle extends Shape{
 	
 	private int iWidth;
 	private int iLength;
 	
+	public Rectangle(int iWidth, int iLength){
+		this.iWidth = iWidth;
+		this.iLength = iLength;
+		
+	}
+
 	public int getiWidth() {
 		return iWidth;
 	}
@@ -32,6 +37,10 @@ public class Rectangle extends Shape{
 	public double perimeter() {
 		return 2 * (iWidth + iLength);
 	} 
+	
+	public int compare(Rectangle a, Rectangle b) {
+		return Double.compare(a.area(), b.area());
+	}
 
 
 	

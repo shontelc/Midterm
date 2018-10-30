@@ -4,6 +4,10 @@ import java.util.Comparator;
 
 public class Cuboid extends Rectangle {
 	
+	public Cuboid(int iWidth, int iLength,int iDepth) {
+		super(iWidth, iLength);
+		this.iDepth = iDepth;
+	}
 	private int iDepth;
 	
 	public int getiDepth() {
