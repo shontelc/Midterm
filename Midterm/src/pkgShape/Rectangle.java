@@ -3,7 +3,10 @@ package pkgShape;
 import java.util.Collections;
 
 public class Rectangle extends Shape{
-	int iWidth;
+	
+	private int iWidth;
+	private int iLength;
+	
 	public int getiWidth() {
 		return iWidth;
 	}
@@ -12,7 +15,6 @@ public class Rectangle extends Shape{
 		this.iWidth = iWidth;
 	}
 
-	int iLength;
 	
 	public int getiLength() {
 		return iLength;
@@ -27,7 +29,6 @@ public class Rectangle extends Shape{
 		 return iWidth * iLength;		
 	}
 
-	@Override
 	public double perimeter() {
 		return 2 * (iWidth + iLength);
 	} 
